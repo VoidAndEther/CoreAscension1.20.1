@@ -78,6 +78,8 @@ public class CoreAscensionItems {
     public static final Item LUMITE_INGOT = registerItem("lumite_ingot", new Item(new FabricItemSettings().fireproof()));
     public static final Item MAGIC_MIRROR = registerItem("magic_mirror", new MagicMirrorItem(new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item CRYSTALLINE_ARTIFACT = registerItem("crystalline_artifact", new Item(new FabricItemSettings().fireproof()));
+    public static final Item POWER_CONSTRUCT = registerItem("power_construct", new Item(new FabricItemSettings().fireproof()));
+    public static final Item LUMITE_APPARATUS = registerItem("lumite_apparatus", new Item(new FabricItemSettings().fireproof()));
 
     public static final Item PRISMAERO_SHARD = registerItem("prismaero_shard", new Item(new FabricItemSettings()));
     public static final Item PRISMAERO_CRYSTALS = registerItem("prismaero_crystals", new Item(new FabricItemSettings()));

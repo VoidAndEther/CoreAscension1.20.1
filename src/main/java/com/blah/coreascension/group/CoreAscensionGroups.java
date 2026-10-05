@@ -653,6 +653,7 @@ public class CoreAscensionGroups
             entries.add(CoreAscensionItems.FYRENDIUM_ROCK);
             entries.add(CoreAscensionItems.SOLARIUM_INGOT);
             entries.add(CoreAscensionItems.LUMITE_INGOT);
+            entries.add(CoreAscensionItems.LUMITE_APPARATUS);
             entries.add(CoreAscensionItems.SUNSTONE);
             entries.add(CoreAscensionItems.URANIUM_INGOT);
             entries.add(CoreAscensionItems.RUBY);
@@ -693,6 +694,7 @@ public class CoreAscensionGroups
             entries.add(CoreAscensionItems.CRYSTAL_LEGGINGS);
             entries.add(CoreAscensionItems.CRYSTAL_BOOTS);
             entries.add(CoreAscensionItems.CRYSTALLINE_ARTIFACT);
+            entries.add(CoreAscensionItems.POWER_CONSTRUCT);
             entries.add(CoreAscensionItems.MAGIC_MIRROR);
             entries.add(CoreAscensionItems.TERRESTRIAL_CONSTRUCT);
             entries.add(CoreAscensionItems.PRISMAERO_SHARD);

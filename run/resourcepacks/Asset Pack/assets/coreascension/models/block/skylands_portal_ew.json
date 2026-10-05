@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "coreascension:block/skylands_portal",
-    "portal": "coreascension:block/skylands_portal"
+    "particle": "coreascension:block/skylandsportal",
+    "portal": "coreascension:block/skylandsportal"
   },
   "elements": [
     {
