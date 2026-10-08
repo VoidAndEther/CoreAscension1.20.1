@@ -1,12 +1,14 @@
 package com.blah.coreascension.entity;
 
 import com.blah.coreascension.CoreAscension;
+import com.blah.coreascension.entity.entities.mobs.FlakelingEntity;
 import com.blah.coreascension.entity.entities.mobs.PorcupineEntity;
 import com.blah.coreascension.entity.entities.projectiles.bolt.*;
 import com.blah.coreascension.entity.entities.projectiles.shuriken.*;
+import com.blah.coreascension.entity.model.FlakelingModel;
 import com.blah.coreascension.entity.model.PorcupineModel;
 import com.blah.coreascension.entity.model.SkyderModel;
-import com.blah.coreascension.entity.renderers.PorcupineRenderer;
+import com.blah.coreascension.entity.renderers.*;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -22,6 +24,7 @@ import net.minecraft.util.Identifier;
 
 public class CoreAscensionEntities {
     public static final EntityType<PorcupineEntity> PORCUPINE = RegisterEntity("porcupine", FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, PorcupineEntity::new).dimensions(PorcupineEntity.getDimensions()));
+    public static final EntityType<FlakelingEntity> FLAKELING = RegisterEntity("flakeling", FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, FlakelingEntity::new).dimensions(FlakelingEntity.getDimensions()));
 
     public static final EntityType<RubyBoltEntity> RUBY_BOLT = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(CoreAscension.MOD_ID, "ruby_bolt"),
@@ -121,13 +124,16 @@ public class CoreAscensionEntities {
         EntityRendererRegistry.register(TADANITE_SHURIKEN, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(LUMITE_SHURIKEN, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(PORCUPINE, PorcupineRenderer::new);
+        EntityRendererRegistry.register(FLAKELING, FlakelingRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(CoreAscensionModelLayers.PORCUPINE, PorcupineModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(CoreAscensionModelLayers.SKYDER, SkyderModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(CoreAscensionModelLayers.FLAKELING, FlakelingModel::getTexturedModelData);
     }
 
     public static void RegisterEntities()
     {
         FabricDefaultAttributeRegistry.register(PORCUPINE, PorcupineEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(FLAKELING, FlakelingEntity.createAttributes());
         CoreAscension.LOGGER.info("Registering Entities for " + CoreAscension.MOD_ID);
     }
 }

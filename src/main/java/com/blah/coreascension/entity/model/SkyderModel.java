@@ -7,7 +7,8 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class SkyderModel <T extends SkyderEntity> extends SinglePartEntityModel<T> {
+public class SkyderModel <T extends SkyderEntity> extends SinglePartEntityModel<T>
+{
 	private final ModelPart body;
 	private final ModelPart head;
 	private final ModelPart thorax;
